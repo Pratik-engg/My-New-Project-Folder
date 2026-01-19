@@ -1,9 +1,10 @@
-name: Coalesce Scheduled Refresh
+name: Deploy to PROD
+
 on:
-  schedule:
-    # Runs at 05:00 UTC every day
-    - cron: '0 5 * * *'
-  workflow_dispatch: # Allows you to trigger the job manually from GitHub UI
+  push:
+    branches:
+      - main
+workflow_dispatch: # Allows you to trigger the job manually from GitHub UI
 
 jobs:
   refresh-data:
