@@ -1,15 +1,13 @@
-name: Deploy to PROD
-
+name: Coalesce Scheduled Refresh
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch: # Allows manual trigger from GitHub UI
+  schedule:
+    # Runs at 05:00 UTC every day
+    - cron: '0 5 * * *'
+  workflow_dispatch: # Allows you to trigger the job manually from GitHub UI
 
 jobs:
   refresh-data:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -21,21 +19,19 @@ jobs:
 
       - name: Install Coalesce CLI
         run: npm install -g @coalescesoftware/coa
-
+      
       - name: Create Deployment Plan
-        env:
-          COA_CONFIG: ${{ secrets.COA_CONFIG }}
         run: npx coa plan --config COA_CONFIG --out ./coa-plan2 --debug
 
-      - name: Print version
+       - name: Print version
         run: npx coa --version
-
+        
       - name: Trigger Coalesce Job
         env:
+          # Assumes you have COA_CONFIG stored in GitHub Secrets
           COA_CONFIG: ${{ secrets.COA_CONFIG }}
-        run: npx coa refresh --config COA_CONFIG
-
+        # "coa refresh" triggers a pipeline run in your Coalesce environment
+     
       - name: Deploy Plan
-        env:
-          COA_CONFIG: ${{ secrets.COA_CONFIG }}
         run: npx coa deploy --config COA_CONFIG --plan ./coa-plan2 --debug
+        
