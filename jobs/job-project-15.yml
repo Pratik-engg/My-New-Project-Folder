@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "15"
+includeSelector: "{ location: \"SRC\" name: \"CUSTOMER\" } OR { location: \"TARGET\" name: \"STG_CUSTOMER\" } OR { location: \"TARGET\" name: \"PSTG_CUSTOMER\" } OR { location: \"TARGET\" name: \"DIM_CUSTOMER\" }"
+name: job-project
+type: Job
