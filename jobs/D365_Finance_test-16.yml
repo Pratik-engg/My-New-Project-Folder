@@ -1,6 +1,0 @@
-excludeSelector: ""
-fileVersion: 1
-id: "16"
-includeSelector: "{ location: \"SRC\" name: \"CUSTOMER\" } OR { location: \"TARGET\" name: \"STG_CUSTOMER\" }"
-name: D365_Finance_test
-type: Job
