@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "80"
+mappingDefinitions:
+  SRC:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF10
+  TARGET:
+    database: PRATIK
+    schema: JOBTESTING2
+name: New PROD Environment
+type: Environment
