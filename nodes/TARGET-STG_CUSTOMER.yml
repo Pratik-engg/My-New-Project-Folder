@@ -31,21 +31,7 @@ operation:
               - columnCounter: cc6717a9-ff92-4055-8e7e-fab8c75c135e
                 stepCounter: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: be92c6af-013f-46d5-99aa-0f2ea2ef1f5b
-          stepCounter: e23948b2-8152-45f7-a3c0-f770d661e59e
-        config: {}
-        dataType: VARCHAR(25)
-        description: Customer Name
-        name: C_NAME
-        nullable: false
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 77a9fc22-e9f3-4e58-8e27-bfdecf46ea3b
-                stepCounter: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
-            transform: ""
-      - appliedColumnTests: {}
+     - appliedColumnTests: {}
         columnReference:
           columnCounter: be92c6af-013f-46d5-99aa-0f2ea2ef1f5b
           stepCounter: e23948b2-8152-45f7-a3c0-f770d661e59e
