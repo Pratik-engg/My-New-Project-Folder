@@ -1,0 +1,31 @@
+fileVersion: 2
+id: "35"
+isDisabled: false
+metadata:
+  defaultStorageLocation: null
+  error: null
+  nodeMetadataSpec: |
+    # {#-- Version: 1.0.0 --#}
+    capitalized: 10 Sql Node
+    short: STG
+    plural: Stages
+    tagColor: '#555555'
+     
+    config:
+    - groupName: Options
+      items:
+      - type: materializationSelector
+        options:
+        - table
+        - view
+        isRequired: true
+      
+      - type: overrideSQLToggle
+        enableIf: "{% if node.materializationType == 'view' %} true {% else %} false {% endif %}" 
+
+      - displayName: Truncate Before
+        attributeName: truncateBefore
+        type: toggleButton
+        default: false
+name: New Type
+type: NodeType
