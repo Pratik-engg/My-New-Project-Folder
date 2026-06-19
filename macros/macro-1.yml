@@ -1,5 +1,5 @@
 fileVersion: 1
 id: "1"
-macroString: ""
+macroString: "{% import \"test-utility-1-1-1\" as testUtils with context %}"
 name: macro
 type: Macro

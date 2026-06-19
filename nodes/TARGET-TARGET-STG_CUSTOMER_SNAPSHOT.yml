@@ -1,0 +1,119 @@
+fileVersion: 1
+id: aaadb2cc-fc8f-442d-81b4-f08f5f92c4c7
+name: STG_CUSTOMER_SNAPSHOT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: |-
+      -- Active customers
+      SELECT *
+      FROM "PRATIK"."WORKTEST"."STG_CUSTOMER_SNAPSHOT"
+      WHERE STATUS = 'Active';
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET-TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests:
+      - continueOnFailure: true
+        description: ""
+        name: Test
+        runOrder: Before
+        templateString: "{{testUtils.expect_column_to_exist( 'NAME') }}"
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fffefb2b-1fa9-4825-9ec8-0f8a9e2495fe
+          stepCounter: aaadb2cc-fc8f-442d-81b4-f08f5f92c4c7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMERID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 798561af-56d6-4dea-a7b0-419c0e279b79
+                stepCounter: 086ad102-45aa-4d0d-bba6-4f45e7759a5e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2b9d9aa-ecff-4e76-a37c-d8df04885b2d
+          stepCounter: aaadb2cc-fc8f-442d-81b4-f08f5f92c4c7
+        config: {}
+        dataType: VARCHAR(255)
+        description: ""
+        name: NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6fa6bd7a-28f6-4eb5-a863-821410cb1949
+                stepCounter: 086ad102-45aa-4d0d-bba6-4f45e7759a5e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c145de90-6e95-4393-aa76-8afe1dc3f202
+          stepCounter: aaadb2cc-fc8f-442d-81b4-f08f5f92c4c7
+        config: {}
+        dataType: VARCHAR(255)
+        description: ""
+        name: EMAIL
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cf4483eb-50e0-40e4-a16c-7f41b66fc29a
+                stepCounter: 086ad102-45aa-4d0d-bba6-4f45e7759a5e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2698ad71-c4f2-4687-9ec0-b2225594c204
+          stepCounter: aaadb2cc-fc8f-442d-81b4-f08f5f92c4c7
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1b4061d8-d153-409e-9cda-32bee4aa7139
+                stepCounter: 086ad102-45aa-4d0d-bba6-4f45e7759a5e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d9e5ce0-ca20-4492-9f00-0ba8faa863ca
+          stepCounter: aaadb2cc-fc8f-442d-81b4-f08f5f92c4c7
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: UPDATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 187a01e6-6a02-4c7c-bcc6-6faa50cc5ed8
+                stepCounter: 086ad102-45aa-4d0d-bba6-4f45e7759a5e
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          CUSTOMER_SNAPSHOT: 086ad102-45aa-4d0d-bba6-4f45e7759a5e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: CUSTOMER_SNAPSHOT
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'CUSTOMER_SNAPSHOT') }} "CUSTOMER_SNAPSHOT"
+        name: STG_CUSTOMER_SNAPSHOT
+        noLinkRefs: []
+  name: STG_CUSTOMER_SNAPSHOT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

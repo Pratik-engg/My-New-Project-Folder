@@ -1,5 +1,8 @@
 fileVersion: 1
 id: "74"
-mappingDefinitions: {}
+mappingDefinitions:
+  TARGET-TARGET:
+    database: ""
+    schema: ""
 name: test-api
 type: Environment

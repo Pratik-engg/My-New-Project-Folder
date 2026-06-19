@@ -1,5 +1,8 @@
 fileVersion: 1
 id: "72"
-mappingDefinitions: {}
+mappingDefinitions:
+  TARGET-TARGET:
+    database: ""
+    schema: ""
 name: New Environment
 type: Environment
