@@ -1,8 +1,14 @@
 fileVersion: 1
 id: "80"
 mappingDefinitions:
+  SRC:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+  TARGET:
+    database: PRATIK
+    schema: WORKDEV
   TARGET-TARGET:
-    database: ""
-    schema: ""
+    database: PRATIK
+    schema: WORKTEST1
 name: New PROD Environment
 type: Environment
