@@ -24,7 +24,7 @@ operation:
         description: ""
         name: Test
         runOrder: Before
-        templateString: "{{testUtils.expect_column_to_exist( 'C_NAME') }}"
+        templateString: "{{testUtils.expect_column_to_exist( 'NAME') }}"
     columns:
       - appliedColumnTests: {}
         columnReference:
