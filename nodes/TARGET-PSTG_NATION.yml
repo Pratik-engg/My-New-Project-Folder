@@ -15,10 +15,7 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: bcc9232d-1a82-4a24-9763-04a92c1b9b23
           stepCounter: 3713e805-d5de-45a5-89b3-9a4223178c7e
@@ -89,10 +86,7 @@ operation:
               - columnCounter: b5aa3017-ef6f-45b7-b2ad-a09ad0559ed0
                 stepCounter: 458bd2bf-f6e9-4a00-9e85-0d483455a209
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 8befe378-a74b-44be-b210-85ebf1b03eaf
           stepCounter: 3713e805-d5de-45a5-89b3-9a4223178c7e
@@ -106,10 +100,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 739849ff-a2c0-48b3-8325-8b4394301de2
           stepCounter: 3713e805-d5de-45a5-89b3-9a4223178c7e
@@ -123,10 +114,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 379453fa-b1f4-429d-9892-ad6fa72c01a4
           stepCounter: 3713e805-d5de-45a5-89b3-9a4223178c7e
@@ -140,10 +128,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 87ccf62c-4331-41c8-bc55-3e20a790daf4
           stepCounter: 3713e805-d5de-45a5-89b3-9a4223178c7e
@@ -157,10 +142,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 82a672fb-3e95-48e6-b890-f9d5fbe0e29d
           stepCounter: 3713e805-d5de-45a5-89b3-9a4223178c7e
@@ -174,10 +156,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 46812ddf-3590-4530-84c5-3c6b768a6c92
           stepCounter: 3713e805-d5de-45a5-89b3-9a4223178c7e
@@ -192,7 +171,10 @@ operation:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_NATION: 458bd2bf-f6e9-4a00-9e85-0d483455a209
@@ -209,6 +191,7 @@ operation:
   overrideSQL: false
   schema: ""
   sqlType: persistentStage
+  table: PSTG_NATION
   type: sql
   version: 1
 type: Node

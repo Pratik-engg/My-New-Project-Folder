@@ -4,6 +4,9 @@ mappingDefinitions:
   SRC:
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF10
+  SRC_TEMP:
+    database: ""
+    schema: ""
   TARGET:
     database: PRATIK
     schema: JOBTESTING2

@@ -74,7 +74,10 @@ operation:
                 stepCounter: e8e03380-9f8e-4163-b471-fcece42dc20e
             transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           NATION: e8e03380-9f8e-4163-b471-fcece42dc20e
@@ -91,6 +94,7 @@ operation:
   overrideSQL: false
   schema: ""
   sqlType: Stage
+  table: STG_NATION
   type: sql
   version: 1
 type: Node
