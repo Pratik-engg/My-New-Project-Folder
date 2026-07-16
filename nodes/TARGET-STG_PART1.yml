@@ -1,6 +1,6 @@
 fileVersion: 1
-id: 68dfae8b-4e5f-4b72-a68a-00f86eee58f2
-name: STG_PART
+id: f956a0d9-247f-4e6f-bb22-0d954577521d
+name: STG_PART1
 operation:
   config:
     insertStrategy: INSERT
@@ -19,8 +19,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3129c1cc-eb9f-42e0-90d3-66c172051029
-          stepCounter: 68dfae8b-4e5f-4b72-a68a-00f86eee58f2
+          columnCounter: b2c4c0a1-0a8f-4950-af20-49dfc28c66a8
+          stepCounter: f956a0d9-247f-4e6f-bb22-0d954577521d
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -33,8 +33,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3635d557-a032-420c-aebe-1a77cc0d64a8
-          stepCounter: 68dfae8b-4e5f-4b72-a68a-00f86eee58f2
+          columnCounter: c7a7b406-7d6d-4393-afe4-0410bd14c13c
+          stepCounter: f956a0d9-247f-4e6f-bb22-0d954577521d
         config: {}
         dataType: VARCHAR(55)
         description: ""
@@ -47,8 +47,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b5306abd-622c-4810-b9f0-72d1f4ae2c66
-          stepCounter: 68dfae8b-4e5f-4b72-a68a-00f86eee58f2
+          columnCounter: 630933cb-cece-4405-8bbc-a0d4e7174ecd
+          stepCounter: f956a0d9-247f-4e6f-bb22-0d954577521d
         config: {}
         dataType: VARCHAR(25)
         description: ""
@@ -61,8 +61,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 62b78333-c8d4-4d70-a15f-ea276c2aed88
-          stepCounter: 68dfae8b-4e5f-4b72-a68a-00f86eee58f2
+          columnCounter: 1ba51255-581e-4198-8d48-f248bb91f9c8
+          stepCounter: f956a0d9-247f-4e6f-bb22-0d954577521d
         config: {}
         dataType: VARCHAR(10)
         description: ""
@@ -75,8 +75,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 5c8302ca-8b7e-40c7-8b7b-4131e1c3a015
-          stepCounter: 68dfae8b-4e5f-4b72-a68a-00f86eee58f2
+          columnCounter: f2ea0b38-d98d-4c3e-80e4-3ab5a9dc2424
+          stepCounter: f956a0d9-247f-4e6f-bb22-0d954577521d
         config: {}
         dataType: VARCHAR(25)
         description: ""
@@ -89,8 +89,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 913c6e76-2c8a-43e3-8bc7-cd3b87ac359f
-          stepCounter: 68dfae8b-4e5f-4b72-a68a-00f86eee58f2
+          columnCounter: e378389b-248a-427a-b477-ccb81e544e1a
+          stepCounter: f956a0d9-247f-4e6f-bb22-0d954577521d
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -103,8 +103,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3a120554-95f2-4107-bec8-3c28e0995019
-          stepCounter: 68dfae8b-4e5f-4b72-a68a-00f86eee58f2
+          columnCounter: 9cd9f439-a0cf-47c0-9f85-e2a2f7a7ba95
+          stepCounter: f956a0d9-247f-4e6f-bb22-0d954577521d
         config: {}
         dataType: VARCHAR(10)
         description: ""
@@ -117,8 +117,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 13834f3c-c4a0-48ac-9545-ce7acc61e7e0
-          stepCounter: 68dfae8b-4e5f-4b72-a68a-00f86eee58f2
+          columnCounter: 3ddac3c0-4a73-414f-803c-80727e6b9c48
+          stepCounter: f956a0d9-247f-4e6f-bb22-0d954577521d
         config: {}
         dataType: NUMBER(12,2)
         description: ""
@@ -131,8 +131,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 19166a0b-4a35-4442-84e1-6954252ba49b
-          stepCounter: 68dfae8b-4e5f-4b72-a68a-00f86eee58f2
+          columnCounter: bcfdd66a-a49a-4bf4-a4cc-17c36cb19a51
+          stepCounter: f956a0d9-247f-4e6f-bb22-0d954577521d
         config: {}
         dataType: VARCHAR(23)
         description: ""
@@ -155,9 +155,9 @@ operation:
             nodeName: PART
         join:
           joinCondition: FROM {{ ref('SRC', 'PART') }} "PART"
-        name: STG_PART
+        name: STG_PART1
         noLinkRefs: []
-  name: STG_PART
+  name: STG_PART1
   overrideSQL: false
   schema: ""
   sqlType: Stage
