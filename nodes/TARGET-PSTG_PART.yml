@@ -264,14 +264,12 @@ operation:
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          STG_PART: f956a0d9-247f-4e6f-bb22-0d954577521d
+          STG_PART1: f956a0d9-247f-4e6f-bb22-0d954577521d
         customSQL:
           customSQL: ""
-        dependencies:
-          - locationName: TARGET
-            nodeName: STG_PART
+        dependencies: []
         join:
-          joinCondition: FROM {{ ref('TARGET', 'STG_PART') }} "STG_PART"
+          joinCondition: FROM {{ ref('TARGET', 'STG_PART1') }} "STG_PART1"
         name: PSTG_PART
         noLinkRefs: []
   name: PSTG_PART
