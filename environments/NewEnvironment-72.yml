@@ -6,6 +6,6 @@ mappingDefinitions:
     schema: TPCH_SF10
   TARGET:
     database: PRATIK
-    schema: JOBPROJECTTEST
+    schema: WORKDEV
 name: New Environment
 type: Environment

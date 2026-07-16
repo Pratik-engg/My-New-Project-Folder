@@ -148,13 +148,18 @@ operation:
     sourceMapping:
       - aliases:
           PART: c2d69e3d-687a-4d47-9ed8-49d80d89a7fb
+          PSTG_PART: 67c089f0-eaf1-4f3e-a5cb-622b620dd4c4
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: SRC
             nodeName: PART
+          - locationName: TARGET
+            nodeName: PSTG_PART
         join:
-          joinCondition: FROM {{ ref('SRC', 'PART') }} "PART"
+          joinCondition: |-
+            FROM {{ ref('SRC', 'PART') }} "PART"
+            LEFT JOIN {{ ref('TARGET', 'PSTG_PART') }} "PSTG_PART"
         name: STG_PART1
         noLinkRefs: []
   name: STG_PART1
