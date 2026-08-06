@@ -1,0 +1,139 @@
+fileVersion: 1
+id: 8ec10ab4-0484-4129-a257-a61a6accc443
+name: WRK_STEP_2
+operation:
+  config:
+    autoRetryToggle: false
+    autoSuspendToggle: false
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    configJSON: ""
+    devMode: true
+    errIntName: ""
+    errNotifyToggle: false
+    execTime:
+      items:
+        - {}
+    flagSrcStream: true
+    groupByAll: false
+    insertStrategy: UNION
+    maxServerlessSize: 6. XXLARGE
+    minServerlessSize: 1. XSMALL
+    multiStreamBehavior: AND
+    numFailures: "10"
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    overlapExecToggle: false
+    predTask: WRK_STEP_1
+    retryAttmpt: "0"
+    rootTask: DATA_TRANSFORMATION_ROOT_TASK
+    scheduleCRON: 5 0-23 * * * America/Los_Angeles
+    schedulePeriodOption: Predecessor
+    schedulingMode: Warehouse Task
+    selectDistinct: false
+    serverlessSize: 3. MEDIUM
+    sizeBoundToggle: false
+    spfcUserToggle: false
+    succIntName: ""
+    successNotifyToggle: false
+    taskGraphToggle: false
+    timeOut: 60000
+    truncateBefore: true
+    userName: ""
+    whName: <WAREHOUSE_NAME>
+  database: ""
+  deployEnabled: true
+  description: Second chained task step running after WRK_STEP_1.
+  isMultisource: false
+  locationName: TARGET
+  materializationType: task
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019fd554-8d6e-70ab-8ee1-7b8980178f49
+          stepCounter: 8ec10ab4-0484-4129-a257-a61a6accc443
+        config: {}
+        dataType: NUMBER(38,0)
+        description: Nation key
+        name: N_NATIONKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019fd554-74cc-778b-bf7d-b55a25958dac
+                stepCounter: c6a8b322-a8d6-47a9-b511-5cfafdc890f4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019fd554-8d6e-70ab-8ee1-7da8171a81d3
+          stepCounter: 8ec10ab4-0484-4129-a257-a61a6accc443
+        config: {}
+        dataType: VARCHAR(25)
+        description: Nation name
+        name: N_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019fd554-74cc-778b-bf7d-ba4e55cd0f66
+                stepCounter: c6a8b322-a8d6-47a9-b511-5cfafdc890f4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019fd554-8d6e-70ab-8ee1-823496ca60fb
+          stepCounter: 8ec10ab4-0484-4129-a257-a61a6accc443
+        config: {}
+        dataType: NUMBER(38,0)
+        description: Region key
+        name: N_REGIONKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019fd554-74cc-778b-bf7d-bce3790afc87
+                stepCounter: c6a8b322-a8d6-47a9-b511-5cfafdc890f4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019fd554-8d6e-70ab-8ee1-872001f2e779
+          stepCounter: 8ec10ab4-0484-4129-a257-a61a6accc443
+        config: {}
+        dataType: VARCHAR(152)
+        description: Comment
+        name: N_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019fd554-74cc-778b-bf7d-c31a0da26df8
+                stepCounter: c6a8b322-a8d6-47a9-b511-5cfafdc890f4
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: WRK_STEP_1
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'WRK_STEP_1') }} "WRK_STEP_1"
+        name: TSKWRK_NODE
+        noLinkRefs: []
+  name: WRK_STEP_2
+  overrideSQL: false
+  schema: ""
+  sqlType: streams-and-tasks-2-7-2:::151
+  type: sql
+  version: 1
+type: Node
