@@ -1,0 +1,193 @@
+fileVersion: 1
+id: 5de26967-5f3e-4c41-822b-b4c19d97174b
+name: "001"
+operation:
+  config:
+    autoRetryToggle: false
+    autoSuspendToggle: false
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    configJSON: ""
+    devMode: true
+    errIntName: ""
+    errNotifyToggle: false
+    execTime:
+      items:
+        - {}
+    flagSrcStream: true
+    groupByAll: false
+    insertStrategy: INSERT
+    maxServerlessSize: 6. XXLARGE
+    minServerlessSize: 1. XSMALL
+    multiStreamBehavior: AND
+    numFailures: "10"
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    overlapExecToggle: false
+    predTask: DATA_TRANSFORMATION_ROOT_TASK
+    retryAttmpt: "0"
+    rootTask: DATA_TRANSFORMATION_ROOT_TASK
+    scheduleCRON: 5 0-23 * * * America/Los_Angeles
+    schedulePeriodOption: Minutes
+    schedulingMode: Warehouse Task
+    selectDistinct: false
+    serverlessSize: 3. MEDIUM
+    sizeBoundToggle: false
+    spfcUserToggle: false
+    succIntName: ""
+    successNotifyToggle: false
+    taskGraphToggle: false
+    timeOut: 60000
+    truncateBefore: true
+    userName: ""
+    whName: <WAREHOUSE_NAME>
+  database: ""
+  deployEnabled: true
+  description: Customer data as defined by TPC-H
+  isMultisource: false
+  locationName: TARGET
+  materializationType: task
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 46012721-718b-4ea9-baac-6389b4c90f11
+          stepCounter: 5de26967-5f3e-4c41-822b-b4c19d97174b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: C_CUSTKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cc6717a9-ff92-4055-8e7e-fab8c75c135e
+                stepCounter: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: da6c7e26-5c76-43b4-adfd-1d0c839221c0
+          stepCounter: 5de26967-5f3e-4c41-822b-b4c19d97174b
+        config: {}
+        dataType: VARCHAR(25)
+        description: Customer Name
+        name: C_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 77a9fc22-e9f3-4e58-8e27-bfdecf46ea3b
+                stepCounter: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72f77a02-2588-42d5-81ea-5ede4f24a4b3
+          stepCounter: 5de26967-5f3e-4c41-822b-b4c19d97174b
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: C_ADDRESS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9d503d77-8b03-4671-bd1a-a2b52d0dda1d
+                stepCounter: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63742762-2cd4-4a05-ba91-b8bf5aaa8234
+          stepCounter: 5de26967-5f3e-4c41-822b-b4c19d97174b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: C_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a23076bd-8a32-44fa-964b-1851bdd2a3c5
+                stepCounter: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8be5b1b0-a281-4a01-a0fc-752cac3f2ee8
+          stepCounter: 5de26967-5f3e-4c41-822b-b4c19d97174b
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: C_PHONE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6591b845-3696-41bc-9935-8335c3e210c8
+                stepCounter: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c610ecfc-eb8d-4881-bbbd-a2459b1042fb
+          stepCounter: 5de26967-5f3e-4c41-822b-b4c19d97174b
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        name: C_ACCTBAL
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 79a8866f-0936-454b-9f4f-fe3e4261dfd2
+                stepCounter: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2632d20b-786c-4e70-89f3-6b996636b004
+          stepCounter: 5de26967-5f3e-4c41-822b-b4c19d97174b
+        config: {}
+        dataType: VARCHAR(10)
+        description: ""
+        name: C_MKTSEGMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c42b25a-e22a-4306-926b-47719d769631
+                stepCounter: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c94e7eae-46a4-4f15-a6d6-4fd363aa642e
+          stepCounter: 5de26967-5f3e-4c41-822b-b4c19d97174b
+        config: {}
+        dataType: VARCHAR(117)
+        description: ""
+        name: C_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ac5bbe1e-2d5a-4b84-8404-701543009186
+                stepCounter: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          CUSTOMER: 74b82f07-f07d-4d3e-8a3c-db0b6113c87e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: CUSTOMER
+        join:
+          joinCondition: FROM {{ ref('SRC', 'CUSTOMER') }} "CUSTOMER"
+        name: "001"
+        noLinkRefs: []
+  name: "001"
+  overrideSQL: false
+  schema: ""
+  sqlType: streams-and-tasks-2-7-2:::151
+  type: sql
+  version: 1
+type: Node

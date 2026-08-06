@@ -1,6 +1,6 @@
 fileVersion: 1
-id: db764b59-993d-4f22-8835-63902b019d1f
-name: ROOT_TASK
+id: 9df99bec-de0c-4621-b538-314ef690250d
+name: ROOT
 operation:
   config:
     autoRetryToggle: false
@@ -30,7 +30,7 @@ operation:
     timeOut: 60000
     tskSql: select current_timestamp()
     userName: ""
-    whName: Compute_WH
+    whName: <WAREHOUSE_NAME>
   database: ""
   deployEnabled: true
   description: ""
@@ -41,10 +41,7 @@ operation:
     appliedNodeTests: []
     columns: []
     cteString: ""
-    description: ""
-    destinationName: ""
     enabledColumnTestIDs: []
-    materializationOption: ""
     sourceMapping:
       - aliases: {}
         customSQL:
@@ -52,9 +49,9 @@ operation:
         dependencies: []
         join:
           joinCondition: ""
-        name: ROOT_TASK
+        name: ROOT
         noLinkRefs: []
-  name: ROOT_TASK
+  name: ROOT
   overrideSQL: false
   schema: ""
   sqlType: streams-and-tasks-2-7-2:::154
