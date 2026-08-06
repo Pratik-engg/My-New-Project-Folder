@@ -48,7 +48,7 @@ operation:
     timeOut: 60000
     truncateBefore: true
     userName: ""
-    whName: <WAREHOUSE_NAME>
+    whName: Compute_WH
   database: ""
   deployEnabled: true
   description: First chained task step running after the root task.
