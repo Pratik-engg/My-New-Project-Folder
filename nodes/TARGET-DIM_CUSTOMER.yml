@@ -15,10 +15,7 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 3d87e3e4-1790-485e-b765-48b3477bac29
           stepCounter: 6cbb5ce8-f85a-41cb-b48d-58bbe007f680
@@ -43,8 +40,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 6b3663a5-7f0b-4c79-8ccc-0fd340af63b5
-                stepCounter: 0a0f70c0-c821-4dd8-85e4-b72803f5d409
+              - columnCounter: 3a21c478-06f7-470e-ab29-9a7b943cfc62
+                stepCounter: dd60a17f-3520-4c07-8ac9-2604f0ba5910
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -58,8 +55,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 4f56a072-bbb1-4de3-a93d-030f3c74dd3d
-                stepCounter: 0a0f70c0-c821-4dd8-85e4-b72803f5d409
+              - columnCounter: f1d1490a-2f11-4b90-b8f9-d9232476e496
+                stepCounter: dd60a17f-3520-4c07-8ac9-2604f0ba5910
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -72,8 +69,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 5437c121-2b85-445b-a66a-282deca60db1
-                stepCounter: 0a0f70c0-c821-4dd8-85e4-b72803f5d409
+              - columnCounter: 135f5b2d-548b-4a8a-8f40-29b18723be42
+                stepCounter: dd60a17f-3520-4c07-8ac9-2604f0ba5910
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -86,8 +83,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 70b8fe74-e542-405b-b3d9-e22a0db5c9f2
-                stepCounter: 0a0f70c0-c821-4dd8-85e4-b72803f5d409
+              - columnCounter: cf383c74-8bfa-4753-9bcc-ad8d85f07896
+                stepCounter: dd60a17f-3520-4c07-8ac9-2604f0ba5910
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -100,8 +97,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: aa56aa9e-bb05-48f8-a828-0100e906ffcc
-                stepCounter: 0a0f70c0-c821-4dd8-85e4-b72803f5d409
+              - columnCounter: 249b04a4-96bf-44d0-abb8-21b270468e8a
+                stepCounter: dd60a17f-3520-4c07-8ac9-2604f0ba5910
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -114,8 +111,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 559a4be3-df2d-4632-b84e-c4cce98693b3
-                stepCounter: 0a0f70c0-c821-4dd8-85e4-b72803f5d409
+              - columnCounter: fe29bb4f-3965-4573-b79e-a4a55aaf28ad
+                stepCounter: dd60a17f-3520-4c07-8ac9-2604f0ba5910
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -128,8 +125,8 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 026e4fc2-3df2-45da-b2ff-8bf04a94a5b0
-                stepCounter: 0a0f70c0-c821-4dd8-85e4-b72803f5d409
+              - columnCounter: 005e970d-7ddb-4c57-9b88-8924d5c90812
+                stepCounter: dd60a17f-3520-4c07-8ac9-2604f0ba5910
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -142,8 +139,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: d274806b-5837-457c-aec8-e775262d37c9
-                stepCounter: 0a0f70c0-c821-4dd8-85e4-b72803f5d409
+              - columnCounter: 3bfb7436-0d65-4770-9621-72265e209462
+                stepCounter: dd60a17f-3520-4c07-8ac9-2604f0ba5910
             transform: ""
       - appliedColumnTests: {}
         columnReference:
@@ -156,13 +153,10 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 22264b30-2e66-4911-8bc4-b56f79f92d5a
-                stepCounter: 0a0f70c0-c821-4dd8-85e4-b72803f5d409
+              - columnCounter: cfa14d6e-b51f-4f91-b5cf-37ecc69a6222
+                stepCounter: dd60a17f-3520-4c07-8ac9-2604f0ba5910
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: dd80cc48-4458-4ddd-9d03-5be6a08d2b2c
           stepCounter: 6cbb5ce8-f85a-41cb-b48d-58bbe007f680
@@ -176,10 +170,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 881b0e9b-e6c7-40fc-a6d9-d4983e167174
           stepCounter: 6cbb5ce8-f85a-41cb-b48d-58bbe007f680
@@ -193,10 +184,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 75ccd24f-318e-410f-8edd-3a33c0701250
           stepCounter: 6cbb5ce8-f85a-41cb-b48d-58bbe007f680
@@ -210,10 +198,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 8d6dad7c-4206-4726-a8bc-584e9bf057a2
           stepCounter: 6cbb5ce8-f85a-41cb-b48d-58bbe007f680
@@ -227,10 +212,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 74999565-2dcc-430b-8f93-7c4b449db6d1
           stepCounter: 6cbb5ce8-f85a-41cb-b48d-58bbe007f680
@@ -244,10 +226,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: a35baf01-9262-497d-ac42-e6013cd0a6c1
           stepCounter: 6cbb5ce8-f85a-41cb-b48d-58bbe007f680
@@ -262,7 +241,10 @@ operation:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           PSTG_CUSTOMER: 0a0f70c0-c821-4dd8-85e4-b72803f5d409
