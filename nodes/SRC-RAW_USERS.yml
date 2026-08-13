@@ -1,0 +1,92 @@
+fileVersion: 1
+id: bd58b5fc-149e-4be0-9cc0-dca7b0966d75
+name: RAW_USERS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f412923e-fed8-433d-96d8-15f33611dbe6
+          stepCounter: bd58b5fc-149e-4be0-9cc0-dca7b0966d75
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: USER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92c14f48-5603-4b1e-98dc-e4b590e02d2c
+          stepCounter: bd58b5fc-149e-4be0-9cc0-dca7b0966d75
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: USER_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 196f2ed1-a65e-4934-b01e-3d3fcb8f4d85
+          stepCounter: bd58b5fc-149e-4be0-9cc0-dca7b0966d75
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: COUNTRY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b9934a1-98a7-4e55-9696-e02e842c3901
+          stepCounter: bd58b5fc-149e-4be0-9cc0-dca7b0966d75
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: RAW_USERS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
