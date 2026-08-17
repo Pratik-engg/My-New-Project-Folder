@@ -1,0 +1,16 @@
+config:
+  entities:
+    nodeTypes:
+      "631":
+        defaultStorageLocation: null
+        isDisabled: false
+      "632":
+        defaultStorageLocation: null
+        isDisabled: false
+  packageVariables: ""
+fileVersion: 1
+id: "@coalesce/snowflake/semantic-view"
+name: semantic-view-1-0-1
+packageID: "@coalesce/snowflake/semantic-view"
+releaseID: 1126d8cd-fbf9-43e4-a56c-4f87a3eb0591
+type: Package

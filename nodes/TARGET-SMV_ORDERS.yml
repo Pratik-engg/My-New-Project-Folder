@@ -1,0 +1,252 @@
+fileVersion: 1
+id: d022bd64-d4f3-4024-beb7-30759803bf7c
+name: SMV_ORDERS
+operation:
+  config:
+    DimConfig:
+      items:
+        - dimAlias: PRODUCT_NAME
+          dimCol:
+            columnCounter: ea72e64e-7942-4a6e-87f0-c4a67b5ca223
+            stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+          dimComment: ""
+          dimSynonym: ""
+          dimTransform: ""
+        - dimAlias: ORDER_DATE
+          dimCol:
+            columnCounter: 48b808fe-1092-4e00-ae05-a237c4663f5c
+            stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+          dimComment: ""
+          dimSynonym: ""
+          dimTransform: ""
+        - dimAlias: CUSTOMER_ID
+          dimCol:
+            columnCounter: f8d63653-62c4-4323-83e1-ec126db30ef6
+            stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+          dimComment: ""
+          dimSynonym: ""
+          dimTransform: ""
+    aiQuestionCategorization: ""
+    aiSqlGeneration: ""
+    deriveCol: false
+    dimToggle: true
+    factDetConfig:
+      items:
+        - factAlias: ""
+          factCol:
+            columnCounter: 7486f1ce-f2fc-4e16-bdf1-6dd7a45cb8d6
+            stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+          factComment: ""
+          factSynonym: ""
+          factTranform: ""
+        - factAlias: ""
+          factCol:
+            columnCounter: 4a904b88-dd95-402c-ba96-be02e151a7e9
+            stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+          factComment: ""
+          factSynonym: ""
+          factTranform: ""
+        - factAlias: ""
+          factCol:
+            columnCounter: 21dd7bc9-5912-41b9-8762-91a7d3931204
+            stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+          factComment: ""
+          factSynonym: ""
+          factTranform: ""
+    factToggle: true
+    foreignKeyConfig:
+      items:
+        - {}
+    foreignToggle: false
+    metricConfig:
+      items:
+        - metricAlias: total_sales
+          metricCol:
+            columnCounter: 21dd7bc9-5912-41b9-8762-91a7d3931204
+            stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+          metricComment: ""
+          metricSynonym: ""
+          metricTransform: SUM
+          metricTransformExprn: ""
+        - metricAlias: avg_order_amount
+          metricCol:
+            columnCounter: 21dd7bc9-5912-41b9-8762-91a7d3931204
+            stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+          metricComment: ""
+          metricSynonym: ""
+          metricTransform: AVG
+          metricTransformExprn: ""
+    metricToggle: true
+    primaryKeyConfig:
+      items:
+        - primAlias: ORDERS
+          primComment: Handle Order Information
+          primSynonym: Order Table
+          primaryKey:
+            columnCounter: c14b51b0-2757-46dd-9ca5-e901433dd8bb
+            stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+    semanticMaterialization: semantic view
+    tableOnlyToggle: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: semantic view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c14b51b0-2757-46dd-9ca5-e901433dd8bb
+          stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ed04b35f-0e80-4bfc-b1e9-7ac8937b4c7b
+                stepCounter: 189399c8-661b-4c6d-b1a3-52510e0c1dc3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7486f1ce-f2fc-4e16-bdf1-6dd7a45cb8d6
+          stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 83bc40ef-dcfc-4f94-b963-75e6d139137d
+                stepCounter: 189399c8-661b-4c6d-b1a3-52510e0c1dc3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8d63653-62c4-4323-83e1-ec126db30ef6
+          stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMERID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cffe165e-11b9-448d-94cd-6d2280d18008
+                stepCounter: 189399c8-661b-4c6d-b1a3-52510e0c1dc3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48b808fe-1092-4e00-ae05-a237c4663f5c
+          stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+        config: {}
+        dataType: DATE
+        description: ""
+        name: ORDERDATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bb4ac36b-ec9a-4cee-82be-fa3fe6463e29
+                stepCounter: 189399c8-661b-4c6d-b1a3-52510e0c1dc3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea72e64e-7942-4a6e-87f0-c4a67b5ca223
+          stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PRODUCTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f459b8fb-cf74-4fb4-9510-9f0352364578
+                stepCounter: 189399c8-661b-4c6d-b1a3-52510e0c1dc3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4a904b88-dd95-402c-ba96-be02e151a7e9
+          stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2cf07e14-089b-40c5-8878-fc7ae12efc8d
+                stepCounter: 189399c8-661b-4c6d-b1a3-52510e0c1dc3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21dd7bc9-5912-41b9-8762-91a7d3931204
+          stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: TOTAL_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b0d56d91-a63a-4ef9-bb32-661677305d8a
+                stepCounter: 189399c8-661b-4c6d-b1a3-52510e0c1dc3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6603a26c-e054-4721-8085-f9cc371139eb
+          stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        name: total_sales
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: de02af88-2707-493d-938c-454ceabeb919
+          stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        name: avg_order_amount
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          ORDERS: 189399c8-661b-4c6d-b1a3-52510e0c1dc3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: ORDERS
+        join:
+          joinCondition: FROM {{ ref('SRC', 'ORDERS') }} "ORDERS"
+        name: SMV_ORDERS
+        noLinkRefs: []
+  name: SMV_ORDERS
+  overrideSQL: false
+  schema: ""
+  sqlType: semantic-view-1-0-1:::632
+  type: sql
+  version: 1
+type: Node

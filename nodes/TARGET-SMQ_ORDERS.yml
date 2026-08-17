@@ -1,0 +1,75 @@
+fileVersion: 1
+id: 5d7ab012-dfa7-47a3-9d89-76b1bdb557da
+name: SMQ_ORDERS
+operation:
+  config:
+    orderby: false
+    orderbycolumn:
+      items:
+        - sortColName:
+            columnCounter: ba5b2702-bd3b-416a-a29d-363d40c3e791
+            stepCounter: 5d7ab012-dfa7-47a3-9d89-76b1bdb557da
+          sortOrder: DESC
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 181ccbea-07e9-419f-ab68-4440d9b3eb59
+          stepCounter: 5d7ab012-dfa7-47a3-9d89-76b1bdb557da
+        config:
+          isaDimColumn: true
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PRODUCTNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ea72e64e-7942-4a6e-87f0-c4a67b5ca223
+                stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf4ae6e3-9e54-472b-ac62-cf1eee3b7f59
+          stepCounter: 5d7ab012-dfa7-47a3-9d89-76b1bdb557da
+        config:
+          isaMetricColumn: true
+        dataType: NUMBER(10,2)
+        description: ""
+        name: total_sales
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6603a26c-e054-4721-8085-f9cc371139eb
+                stepCounter: d022bd64-d4f3-4024-beb7-30759803bf7c
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          SMV_ORDERS: d022bd64-d4f3-4024-beb7-30759803bf7c
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: SMV_ORDERS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'SMV_ORDERS') }} "SMV_ORDERS"
+        name: SMQ_ORDERS
+        noLinkRefs: []
+  name: SMQ_ORDERS
+  overrideSQL: false
+  schema: ""
+  sqlType: semantic-view-1-0-1:::631
+  type: sql
+  version: 1
+type: Node
