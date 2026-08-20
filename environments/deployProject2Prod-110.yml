@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "110"
+mappingDefinitions:
+  SRC:
+    database: PRATIK_DB
+    schema: RAW
+  TARGET:
+    database: PRATIK
+    schema: DEPLOYP2
+name: deploy Project 2 Prod
+type: Environment
