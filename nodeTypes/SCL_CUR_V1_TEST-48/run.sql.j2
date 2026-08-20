@@ -1,0 +1,107 @@
+{% set ssk_column = namespace(name='') %}
+{% for col in columns %}
+	{% if '_SSK' in col.name %}
+		{% set ssk_column.name = col.name %}
+	{% endif %}
+{% endfor %}
+
+{% for test in node.tests if config.testsEnabled %}
+	{% if test.runOrder == 'Before' %}
+		{{ test_stage(test.name, test.continueOnFailure) }}
+		{{ test.templateString }}
+	{% endif %}
+{% endfor %}
+
+{% if node.materializationType == 'table' %}
+	{% if config.preSQL %}
+		{{ stage('Pre-SQL') }}
+		{{ config.preSQL }}
+	{% endif %}
+	
+	{% for source in sources %}
+		{{ stage('Delete Records with Newer Versions') }}
+		DELETE FROM {{ ref_no_link(node.location.name, node.name) }} TARGET
+		WHERE TARGET.SYSTEM_CURRENT_FLAG = 'Y'
+		AND EXISTS (
+			SELECT 1
+			FROM {{ ref(source.dependencies[0].node.location.name, source.dependencies[0].node.name) }} SRC
+			WHERE SRC."{{ ssk_column.name }}" = TARGET."{{ ssk_column.name }}"
+			AND SRC.SYSTEM_CURRENT_FLAG = 'Y'
+			AND SRC.SYSTEM_UPDATE_DATE > TARGET.SYSTEM_UPDATE_DATE
+		)
+	{% endfor %}
+	
+	{% if config.insertStrategy in ['UNION', 'UNION ALL'] %}
+		{{ stage('Union Sources') }}
+		INSERT INTO {{ ref_no_link(node.location.name, node.name) }}
+		(
+			{% for col in columns %}
+				"{{ col.name }}"
+				{%- if not loop.last -%},{% endif %}
+			{% endfor %}
+		)
+	{% endif %}
+
+	{% for source in sources %}
+
+		{% if config.insertStrategy == 'INSERT' %}
+			{{ stage('Insert New and Updated Records') }}
+			INSERT INTO {{ ref_no_link(node.location.name, node.name) }}
+			(
+				{% for col in source.columns %}
+					"{{ col.name }}"
+					{%- if not loop.last -%},{% endif %}
+				{% endfor %}
+			)
+		{% endif %}
+
+		SELECT
+		{% for col in source.columns %}
+			{{ get_source_transform(col) }} AS "{{ col.name }}"
+			{%- if not loop.last -%}, {% endif %}
+		{% endfor %}
+
+		{{ source.join }}
+		{% if source.join and not source.join.strip().upper().endswith('WHERE') %}
+		WHERE SYSTEM_CURRENT_FLAG = 'Y'
+		AND NOT EXISTS (
+			SELECT 1
+			FROM {{ ref_no_link(node.location.name, node.name) }} TGT
+			WHERE TGT."{{ ssk_column.name }}" = {{ source.dependencies[0].node.name }}."{{ ssk_column.name }}"
+		)
+		{% else %}
+		AND SYSTEM_CURRENT_FLAG = 'Y'
+		AND NOT EXISTS (
+			SELECT 1
+			FROM {{ ref_no_link(node.location.name, node.name) }} TGT
+			WHERE TGT."{{ ssk_column.name }}" = {{ source.dependencies[0].node.name }}."{{ ssk_column.name }}"
+		)
+		{% endif %}
+
+		{% if config.insertStrategy in ['UNION', 'UNION ALL'] and not loop.last %}
+			{{config.insertStrategy}}
+		{% endif %}
+
+	{% endfor %}
+
+	{% if config.postSQL %}
+		{{ stage('Post-SQL') }}
+		{{ config.postSQL }}
+	{% endif %}
+{% endif %}
+
+{% if config.testsEnabled %}
+	{% for test in node.tests %}
+		{% if test.runOrder == 'After' %}
+			{{ test_stage(test.name, test.continueOnFailure) }}
+			{{ test.templateString }}
+		{% endif %}
+	{% endfor %}
+
+	{% for column in columns %}
+		{% for test in column.tests %}
+			{{ test_stage(column.name + ": " + test.name) }}
+			{{ test.templateString }}
+		{% endfor %}
+	{% endfor %}
+{% endif %}
