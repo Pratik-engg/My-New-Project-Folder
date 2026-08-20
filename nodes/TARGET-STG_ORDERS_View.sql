@@ -2,9 +2,9 @@
 @nodeType("37")
 @materializationType("view")
 SELECT
-   O_ORDERKEY AS order_key,
-    O_CUSTKEY AS customer_key,
-    O_ORDERSTATUS AS order_status,
-    O_TOTALPRICE::DECIMAL(12,2) AS order_total,
-    O_ORDERDATE AS order_date
+    "ORDERS".O_ORDERKEY AS order_key,
+    "ORDERS".O_CUSTKEY AS customer_key,
+    "ORDERS".O_ORDERSTATUS AS order_status,
+    "ORDERS".O_TOTALPRICE::DECIMAL(12,2) AS order_total,
+    "ORDERS".O_ORDERDATE AS order_date
 FROM {{ ref('SRC', 'ORDERS') }} "ORDERS"
