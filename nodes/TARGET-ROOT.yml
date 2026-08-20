@@ -18,8 +18,8 @@ operation:
     numFailures: "10"
     overlapExecToggle: false
     retryAttmpt: "0"
-    scheduleCRON: 5 0-23 * * * America/Los_Angeles
-    schedulePeriodOption: Minutes
+    scheduleCRON: 0 0 1 * * Asia/Kolkata
+    schedulePeriodOption: CRON
     schedulingMode: Warehouse Task
     serverlessSize: 3. MEDIUM
     sizeBoundToggle: false
@@ -41,14 +41,17 @@ operation:
     appliedNodeTests: []
     columns: []
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases: {}
         customSQL:
           customSQL: ""
         dependencies: []
         join:
-          joinCondition: ""
+          joinCondition: current_timestamp()
         name: ROOT
         noLinkRefs: []
   name: ROOT
