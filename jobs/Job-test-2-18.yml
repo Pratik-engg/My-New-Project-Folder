@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "18"
+includeSelector: "{ location: \"TARGET\" name: \"PSTG_NATION\" } OR { location: \"SRC\" name: \"NATION\" } OR { location: \"TARGET\" name: \"STG_NATION\" }"
+name: Job-test-2
+type: Job
